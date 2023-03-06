@@ -1,0 +1,32 @@
+.btn-tilt {
+  background-color: $tilt-green;
+  color: white;
+
+  &:hover {
+    background-color: $tilt-green-dark;
+    color: white;
+  }
+}
+
+// .btn{
+//     &:focus{
+//         border
+//     }
+// }
+
+.btn-primary {
+  background-color: $tilt-purple;
+  border-color: $tilt-purple;
+  @include transition(all 0.4s ease);
+
+  &:active {
+    background-color: $tilt-purple-dark;
+    border-color: $tilt-purple-dark;
+  }
+
+  @include hoverfocus() {
+    background-color: $tilt-purple-dark;
+    box-shadow: none;
+    border-color: $tilt-purple-dark;
+  }
+}

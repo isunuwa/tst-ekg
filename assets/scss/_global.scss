@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.ticket-list-wrapper,
+.ticket-form-wrapper,
+.white-back {
+  background-color: white;
+  padding: 14px 16px;
+  border-radius: 10px;
+}
+
+form {
+  input,
+  select,
+  .form-select,
+  .form-control {
+    @include hoverfocus() {
+      box-shadow: none;
+      border-color: black;
+      background-color: #f1f1f1;
+    }
+
+    border: none;
+    background-color: #f1f1f1;
+    border-radius: 0px;
+    padding: 10px 10px;
+    // font-size: 15px;
+    font-weight: 300;
+  }
+
+  .form-label {
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 0.2rem;
+    font-weight: 300;
+  }
+}
+
+.min-100 {
+  min-width: 500px;
+}
+
+.overview-wrapper {
+  .overview-title {
+    font-size: 14px;
+    font-weight: 300;
+    color: grey;
+  }
+
+  .overview-stats-count {
+    font-size: 28px;
+    font-weight: 500;
+  }
+}

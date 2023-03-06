@@ -1,0 +1,32 @@
+.canvas-wrapper {
+  overflow: hidden;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+
+  @include transition(all 0.4s ease);
+}
+
+.analytics-item {
+  border-radius: 20px;
+  background-color: white;
+  padding: 12px 16px;
+
+  .canvas-title {
+    color: #626262;
+    margin-bottom: 0.5rem;
+
+    @include transition(all 0.4s ease);
+  }
+
+  &:hover {
+    .canvas-title {
+      color: $color_3;
+    }
+
+    .canvas-wrapper {
+      opacity: 1;
+    }
+  }
+}

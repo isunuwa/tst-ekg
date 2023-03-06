@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ek Ghanti</title>
+
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Box icon CSS   -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- End -->
+
+    <link rel="stylesheet" href="assets/css/app.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="sidebar-logo">
+          <img src="assets/images/favicon.png" alt="logo" />
+        </i>
+        <span class="logo_name"> EkGhanti </span>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">
+            <i class="bx bx-home"></i>
+            <span class="link_name">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-user"></i>
+            <span class="link_name">User</span>
+          </a>
+        </li>
+        <li>
+          <div class="icon-link">
+            <a href="#">
+              <i class="bx bx-radar"></i>
+              <span class="link_name">SMS/Email</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Solutions</a></li>
+            <li><a href="#">Drop 1</a></li>
+            <li><a href="#">Drop 2</a></li>
+            <li><a href="#">Drop 3</a></li>
+          </ul>
+        </li>
+        <li class="active">
+          <a href="ticket.html">
+            <i class="bx bx-sticker"></i>
+            <span class="link_name">Ticket</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-phone-call"></i>
+            <span class="link_name">Phone Status</span>
+          </a>
+        </li>
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="assets/images/favicon.png" alt="profileImg" />
+            </div>
+            <div class="name-job">
+              <div class="profile_name">John Ale</div>
+              <div class="job">Support</div>
+            </div>
+            <i class="bx bx-log-out" title="Logout"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <section class="home-section">
+      <div class="row home-content">
+        <!-- <i class="bx bx-menu"></i> -->
+        <div class="home-navbar">
+          <div class="menu-link-wrapper sidebar-menu-toggle">
+            <div class="menu-link menu-trigger-open">
+              <span class="lines"></span>
+            </div>
+          </div>
+
+          <span class="text">Ticket</span>
+        </div>
+
+        <!-- main section starts here -->
+        <div class="container-fluid">
+          <main>
+            <div class="admin-content-wrapper ticket-wrapper">
+              <div class="container-fluid row p-0">
+                <div class="">
+                  <div class="ticket-actions mb-3 d-flex justify-content-end">
+                    <div class="btn btn-primary rounded-0">Add New Ticket</div>
+                  </div>
+
+                  <div class="ticket-form-wrapper">
+                    <form class="row g-3" id="ticketForm">
+                      <div class="table-title tag-h4 mt-4">
+                        Filter Ticket By
+                      </div>
+                      <div class="col-md-9 canvas-col">
+                        <div class="section-title mb-1">
+                          <span>Basic Information</span>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4 col-sm-12 mb-3">
+                            <label for="inputState1" class="form-label"
+                              >Assigned By</label
+                            >
+                            <select id="inputState1" class="form-select">
+                              <option selected>Select an assignor</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4 col-sm-12 mb-3">
+                            <label for="inputState2" class="form-label"
+                              >Assigned To</label
+                            >
+                            <select id="inputState2" class="form-select">
+                              <option selected>Select an assignee</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4 col-sm-12 mb-3">
+                            <label for="inputState3" class="form-label"
+                              >Group</label
+                            >
+                            <select id="inputState3" class="form-select">
+                              <option selected>Select a group</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4 col-sm-12 mb-3">
+                            <label for="inputState4" class="form-label"
+                              >Project</label
+                            >
+                            <select id="inputState4" class="form-select">
+                              <option selected>Select a project</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4 col-sm-12 mb-3">
+                            <label for="inputState5" class="form-label"
+                              >Vertical</label
+                            >
+                            <select id="inputState5" class="form-select">
+                              <option selected>Select a vertical</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4 col-sm-12 mb-3">
+                            <label for="inputState6" class="form-label"
+                              >Sub Vertical</label
+                            >
+                            <select id="inputState6" class="form-select">
+                              <option selected>Select a sub-vertical</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4 col-sm-12">
+                            <label for="inputState7" class="form-label"
+                              >Customer Number</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="eg: 1234"
+                              name="customer-number"
+                              id="inputState7"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- right side form -->
+                      <div class="col-md-3 canvas-col">
+                        <div class="section-title mb-1">
+                          <span>Date/Time</span>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 mb-3">
+                            <label for="inputDate1" class="form-label"
+                              >Starting Date</label
+                            >
+                            <input
+                              type="date"
+                              name=""
+                              id="inputDate1"
+                              class="form-control"
+                            />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="inputDate2" class="form-label"
+                              >Ending Date</label
+                            >
+                            <input
+                              type="date"
+                              name=""
+                              id="inputDate2"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- actions -->
+                      <div class="col-12 form-actions">
+                        <div class="d-flex justify-content-end">
+                          <div class="btn rounded-0">
+                            <!-- <i class="bx bx-x"></i> -->
+                            <span id="clearForm">Clear Filter</span>
+                          </div>
+                          <button
+                            type="submit"
+                            class="btn btn-primary rounded-0"
+                          >
+                            <i class="bx bx-filter-alt"></i>
+                            Apply Filter
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <!-- ticket listing -->
+                <div class="col-md-12 canvas-col">
+                  <div class="ticket-list-wrapper mt-5">
+                    <div class="table-info">
+                      <div class="table-title tag-h4 mb-3 mt-1">
+                        Ticket Lists
+                      </div>
+                      <div class="table-actions row mb-3">
+                        <div class="left col-md-5">
+                          <div class="btn btn-success rounded-0">Excel</div>
+                          <div class="btn btn-tilt rounded-0 mx-2">CSV</div>
+                        </div>
+                        <div class="right col-md-7">
+                          <div class="search d-flex justify-content-end">
+                            <input
+                              class="form-control rounded-0"
+                              type="search"
+                              placeholder="eg: John Doe"
+                              name="ticket-search"
+                              id=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ticket-table-wrapper table-responsive">
+                      <table class="table ticket-table">
+                        <thead>
+                          <th>Ticket ID</th>
+                          <th>Agent/Customer</th>
+                          <th>Wallet ID</th>
+                          <th>Date</th>
+                          <th>Time</th>
+                          <th>Project</th>
+                          <th>Vertical (Status)</th>
+                          <th>Sub Vertical</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1234</td>
+                            <td>John Doe</td>
+                            <td>98XXXXXXX</td>
+                            <td>Jan 12, 2022</td>
+                            <td>05: 44 AM</td>
+                            <td>KYC update</td>
+                            <td class="status status-pending">Pending</td>
+                            <td class="actions">
+                              <a href="/" class="btn btn-sm btn-outline-danger">
+                                <i class="bx bx-trash-alt"></i>
+                                <span class="link_name">Delete</span>
+                              </a>
+                              <a href="/" class="btn btn-sm btn-outline-info">
+                                <i class="bx bx-edit"></i>
+                                <span class="link_name">Edit</span>
+                              </a>
+                              <a
+                                href="/"
+                                class="btn btn-sm btn-outline-warning"
+                              >
+                                <i class="bx bx-message-alt-error"></i>
+                                <span class="link_name">View</span>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>1234</td>
+                            <td>John Doe</td>
+                            <td>98XXXXXXX</td>
+                            <td>Jan 12, 2022</td>
+                            <td>05: 44 AM</td>
+                            <td>KYC update</td>
+                            <td class="status status-info">In progress</td>
+                            <td class="actions">
+                              <a href="/" class="btn btn-sm btn-outline-danger">
+                                <i class="bx bx-trash-alt"></i>
+                                <span class="link_name">Delete</span>
+                              </a>
+                              <a href="/" class="btn btn-sm btn-outline-info">
+                                <i class="bx bx-edit"></i>
+                                <span class="link_name">Edit</span>
+                              </a>
+                              <a
+                                href="/"
+                                class="btn btn-sm btn-outline-warning"
+                              >
+                                <i class="bx bx-message-alt-error"></i>
+                                <span class="link_name">View</span>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>1234</td>
+                            <td>John Doe</td>
+                            <td>98XXXXXXX</td>
+                            <td>Jan 12, 2022</td>
+                            <td>05: 44 AM</td>
+                            <td>KYC update</td>
+                            <td class="status status-completed">
+                              Raised and closed
+                            </td>
+                            <td class="actions">
+                              <a href="/" class="btn btn-sm btn-outline-danger">
+                                <i class="bx bx-trash-alt"></i>
+                                <span class="link_name">Delete</span>
+                              </a>
+                              <a href="/" class="btn btn-sm btn-outline-info">
+                                <i class="bx bx-edit"></i>
+                                <span class="link_name">Edit</span>
+                              </a>
+                              <a
+                                href="/"
+                                class="btn btn-sm btn-outline-warning"
+                              >
+                                <i class="bx bx-message-alt-error"></i>
+                                <span class="link_name">View</span>
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+        <!-- main section ends here -->
+      </div>
+    </section>
+
+    <!-- external scripts -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <!-- scripts -->
+    <script src="assets/js/navbar.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- custom js -->
+    <script>
+      function clearFormInputs() {
+        let element = document.getElementById("ticketForm");
+        element.reset();
+      }
+
+      let clearFormButton = document.getElementById("clearForm");
+      clearFormButton.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        clearFormInputs();
+      });
+    </script>
+  </body>
+</html>

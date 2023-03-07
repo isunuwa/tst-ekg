@@ -156,6 +156,26 @@
         .link_name {
           opacity: 1;
         }
+        i {
+          &.arrow {
+            display: inline-block;
+            // opacity: 1;
+          }
+        }
+
+        li {
+          &.showMenu {
+            .sub-menu {
+              display: block;
+              position: relative;
+              opacity: 1;
+              left: 0;
+              padding: 6px 6px 14px 80px;
+              margin-bottom: -10px;
+              pointer-events: initial;
+            }
+          }
+        }
       }
 
       .profile-details {
@@ -181,7 +201,7 @@
       overflow: visible;
       li {
         .icon-link {
-          display: block;
+          // display: block;
         }
         a {
           .link_name {
@@ -234,7 +254,7 @@
     ~ {
       .home-section {
         left: 78px;
-        width: calc(100% - 90px);
+        width: calc(100% - 78px);
       }
     }
   }
@@ -327,17 +347,17 @@
   }
 }
 
-@include breakpoint(xsMax) {
-  .sidebar.close {
-    .nav-links {
-      li {
-        .sub-menu {
-          display: none;
-        }
-      }
-    }
-  }
-}
+// @include breakpoint(xsMax) {
+//   .sidebar.close {
+//     .nav-links {
+//       li {
+//         .sub-menu {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+// }
 
 // hamburger animation
 .menu-link-wrapper {
